@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct ios_swiftui_baseApp: App {
+    @StateObject var currentSession: CurrentSession = CurrentSession()
+    
     var body: some Scene {
         WindowGroup {
-            FeedView()
+            if currentSession.token == nil {
+                LoginView().environmentObject(currentSession)
+            } else {
+                MainTabView().environmentObject(currentSession)
+            }
         }
     }
 }

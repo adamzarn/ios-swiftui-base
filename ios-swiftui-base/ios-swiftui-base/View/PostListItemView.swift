@@ -23,7 +23,7 @@ struct PostListItemView: View {
     
     var postHeaderView: some View {
         HStack {
-            ProfilePhotoImageView(url: viewModel.profilePhotoUrl, size: 40)
+            ProfilePhotoImageView(user: viewModel.post.user, size: 40)
             postHeaderTextView
             Spacer()
         }
