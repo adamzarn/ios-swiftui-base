@@ -24,13 +24,20 @@
 		DB6A8C672787615600EA3230 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A8C662787615600EA3230 /* MainTabView.swift */; };
 		DB6A8C692787653B00EA3230 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A8C682787653B00EA3230 /* ProfileView.swift */; };
 		DB6A8C6B27876AE000EA3230 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A8C6A27876ADF00EA3230 /* LogoutButton.swift */; };
-		DBA9C4B7279612CC0040F54C /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9C4B6279612CC0040F54C /* DemoView.swift */; };
-		DBA9C4B927961CB10040F54C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA9C4B827961CB10040F54C /* Session.swift */; };
+		DB82741527DA7A12004CD9E7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82741427DA7A12004CD9E7 /* FeedViewModel.swift */; };
+		DB82741727DA7FB7004CD9E7 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82741627DA7FB7004CD9E7 /* Data+Extension.swift */; };
 		DBC524FC274BF15300F073A6 /* ios_swiftui_baseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC524FB274BF15300F073A6 /* ios_swiftui_baseApp.swift */; };
 		DBC524FE274BF15300F073A6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC524FD274BF15300F073A6 /* FeedView.swift */; };
 		DBC52500274BF15600F073A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC524FF274BF15600F073A6 /* Assets.xcassets */; };
 		DBC52503274BF15600F073A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC52502274BF15600F073A6 /* Preview Assets.xcassets */; };
 		DBC5250A274BF18200F073A6 /* PostListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC52509274BF18200F073A6 /* PostListItemView.swift */; };
+		DBE58BA727C431F40070499D /* AZCachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = DBE58BA627C431F40070499D /* AZCachedAsyncImage */; };
+		DBE58BA927C5787E0070499D /* OptionalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE58BA827C5787E0070499D /* OptionalText.swift */; };
+		DBE58BAB27C58AF30070499D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE58BAA27C58AF30070499D /* ServiceError.swift */; };
+		DBE58BAD27C5919F0070499D /* ErrorAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE58BAC27C5919F0070499D /* ErrorAlertPresenter.swift */; };
+		DBE58BB027CBA54F0070499D /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE58BAF27CBA54F0070499D /* View+Extension.swift */; };
+		DBEE48FB27CD646C0058ACD2 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE48FA27CD646C0058ACD2 /* PHPickerView.swift */; };
+		DBF0B39F27C2DDA000A6E300 /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0B39E27C2DDA000A6E300 /* DateUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,14 +58,20 @@
 		DB6A8C662787615600EA3230 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		DB6A8C682787653B00EA3230 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DB6A8C6A27876ADF00EA3230 /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
-		DBA9C4B6279612CC0040F54C /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
-		DBA9C4B827961CB10040F54C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		DB82741427DA7A12004CD9E7 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		DB82741627DA7FB7004CD9E7 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		DBC524F8274BF15300F073A6 /* ios-swiftui-base.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-swiftui-base.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC524FB274BF15300F073A6 /* ios_swiftui_baseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_swiftui_baseApp.swift; sourceTree = "<group>"; };
 		DBC524FD274BF15300F073A6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		DBC524FF274BF15600F073A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC52502274BF15600F073A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBC52509274BF18200F073A6 /* PostListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListItemView.swift; sourceTree = "<group>"; };
+		DBE58BA827C5787E0070499D /* OptionalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalText.swift; sourceTree = "<group>"; };
+		DBE58BAA27C58AF30070499D /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		DBE58BAC27C5919F0070499D /* ErrorAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertPresenter.swift; sourceTree = "<group>"; };
+		DBE58BAF27CBA54F0070499D /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		DBEE48FA27CD646C0058ACD2 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
+		DBF0B39E27C2DDA000A6E300 /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE58BA727C431F40070499D /* AZCachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +108,8 @@
 				DB00C0D12751795000D631A7 /* ProfilePhotoImageView.swift */,
 				DB6A8C682787653B00EA3230 /* ProfileView.swift */,
 				DB6A8C6A27876ADF00EA3230 /* LogoutButton.swift */,
+				DBE58BA827C5787E0070499D /* OptionalText.swift */,
+				DBEE48FA27CD646C0058ACD2 /* PHPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +119,7 @@
 			children = (
 				DB0910E2277114EE0010BDC9 /* LoginViewModel.swift */,
 				DB00C0CF2751791400D631A7 /* PostListItemViewModel.swift */,
+				DB82741427DA7A12004CD9E7 /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +131,7 @@
 				DB6A8C6227875E4200EA3230 /* URLRequestConvertible.swift */,
 				DB00C0C9275169D800D631A7 /* PostsService.swift */,
 				DB0910E62772DD2D0010BDC9 /* AuthService.swift */,
+				DBE58BAA27C58AF30070499D /* ServiceError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				DB0910DE2771142A0010BDC9 /* Keychain.swift */,
+				DBF0B39E27C2DDA000A6E300 /* DateUtility.swift */,
+				DBE58BAC27C5919F0070499D /* ErrorAlertPresenter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -129,8 +149,6 @@
 		DBC524EF274BF15300F073A6 = {
 			isa = PBXGroup;
 			children = (
-				DBA9C4B827961CB10040F54C /* Session.swift */,
-				DBA9C4B6279612CC0040F54C /* DemoView.swift */,
 				DBC524FA274BF15300F073A6 /* ios-swiftui-base */,
 				DBC524F9274BF15300F073A6 /* Products */,
 			);
@@ -152,6 +170,7 @@
 				DB0910D82771138A0010BDC9 /* View */,
 				DB0910D9277113A00010BDC9 /* ViewModel */,
 				DB0910DA277113B40010BDC9 /* Service */,
+				DBE58BAE27CBA52B0070499D /* Extensions */,
 				DB0910DD277114150010BDC9 /* Utilities */,
 				DBC524FF274BF15600F073A6 /* Assets.xcassets */,
 				DBC52501274BF15600F073A6 /* Preview Content */,
@@ -165,6 +184,15 @@
 				DBC52502274BF15600F073A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBE58BAE27CBA52B0070499D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBE58BAF27CBA54F0070499D /* View+Extension.swift */,
+				DB82741627DA7FB7004CD9E7 /* Data+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +211,9 @@
 			dependencies = (
 			);
 			name = "ios-swiftui-base";
+			packageProductDependencies = (
+				DBE58BA627C431F40070499D /* AZCachedAsyncImage */,
+			);
 			productName = "ios-swiftui-base";
 			productReference = DBC524F8274BF15300F073A6 /* ios-swiftui-base.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +242,9 @@
 				Base,
 			);
 			mainGroup = DBC524EF274BF15300F073A6;
+			packageReferences = (
+				DBE58BA527C431F40070499D /* XCRemoteSwiftPackageReference "AZCachedAsyncImage" */,
+			);
 			productRefGroup = DBC524F9274BF15300F073A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,27 +272,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC524FE274BF15300F073A6 /* FeedView.swift in Sources */,
+				DB82741727DA7FB7004CD9E7 /* Data+Extension.swift in Sources */,
+				DBF0B39F27C2DDA000A6E300 /* DateUtility.swift in Sources */,
 				DB00C0D02751791400D631A7 /* PostListItemViewModel.swift in Sources */,
 				DBC524FC274BF15300F073A6 /* ios_swiftui_baseApp.swift in Sources */,
 				DB00C0CE27516ADF00D631A7 /* User.swift in Sources */,
 				DBC5250A274BF18200F073A6 /* PostListItemView.swift in Sources */,
+				DBE58BA927C5787E0070499D /* OptionalText.swift in Sources */,
+				DBE58BB027CBA54F0070499D /* View+Extension.swift in Sources */,
 				DB0910E92772DD7C0010BDC9 /* Session.swift in Sources */,
 				DB0910DC277113FC0010BDC9 /* CurrentSession.swift in Sources */,
 				DB00C0CA275169D800D631A7 /* PostsService.swift in Sources */,
 				DB00C0CC27516AA600D631A7 /* Post.swift in Sources */,
 				DB0910E52771168A0010BDC9 /* Exception.swift in Sources */,
 				DB0910E3277114EE0010BDC9 /* LoginViewModel.swift in Sources */,
+				DBE58BAB27C58AF30070499D /* ServiceError.swift in Sources */,
 				DB6A8C6B27876AE000EA3230 /* LogoutButton.swift in Sources */,
 				DB0910E1277114940010BDC9 /* LoginView.swift in Sources */,
-				DBA9C4B7279612CC0040F54C /* DemoView.swift in Sources */,
+				DB82741527DA7A12004CD9E7 /* FeedViewModel.swift in Sources */,
 				DB00C0D22751795000D631A7 /* ProfilePhotoImageView.swift in Sources */,
+				DBEE48FB27CD646C0058ACD2 /* PHPickerView.swift in Sources */,
 				DB6A8C672787615600EA3230 /* MainTabView.swift in Sources */,
 				DB0910DF2771142A0010BDC9 /* Keychain.swift in Sources */,
 				DB0910E72772DD2D0010BDC9 /* AuthService.swift in Sources */,
-				DBA9C4B927961CB10040F54C /* Session.swift in Sources */,
 				DB6A8C692787653B00EA3230 /* ProfileView.swift in Sources */,
 				DB6A8C6527875E7200EA3230 /* Endpoint.swift in Sources */,
 				DB6A8C6327875E4200EA3230 /* URLRequestConvertible.swift in Sources */,
+				DBE58BAD27C5919F0070499D /* ErrorAlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBE58BA527C431F40070499D /* XCRemoteSwiftPackageReference "AZCachedAsyncImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamzarn/AZCachedAsyncImage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBE58BA627C431F40070499D /* AZCachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBE58BA527C431F40070499D /* XCRemoteSwiftPackageReference "AZCachedAsyncImage" */;
+			productName = AZCachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBC524F0274BF15300F073A6 /* Project object */;
 }

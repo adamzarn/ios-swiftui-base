@@ -14,8 +14,7 @@ struct PostListItemView: View {
     var body: some View {
         VStack(alignment: .leading) {
             postHeaderView
-            Text(viewModel.text)
-                .fixedSize(horizontal: false, vertical: true)
+            postTextView
         }
         .padding()
         .listRowInsets(EdgeInsets())
@@ -34,30 +33,28 @@ struct PostListItemView: View {
             Text(viewModel.name)
                 .font(.headline)
                 .fontWeight(.bold)
-            Text(viewModel.time)
+            OptionalText(viewModel.time)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
+    }
+    
+    var postTextView: some View {
+        Text(viewModel.text)
+            .font(.subheadline)
+            .fixedSize(horizontal: false, vertical: true)
     }
 }
 
 struct PostListItem_Previews: PreviewProvider {
     static var previews: some View {
-        let user = User(id: "1",
-                        firstName: "Michael",
-                        lastName: "Jordan",
-                        username: "Air Jordan",
-                        email: "mj@gmail.com",
-                        profilePhotoUrl: nil,
-                        createdAt: "123",
-                        updatedAt: "123",
-                        isAdmin: true,
-                        isEmailVerified: true)
         let post = Post(id: "1",
                         text: "Hello",
-                        createdAt: "123",
-                        user: user)
-        PostListItemView(viewModel: PostListItemViewModel(post: post)).previewLayout(.fixed(width: 375, height: 200))
+                        createdAt: "2021-11-04T00:17:01Z",
+                        user: User.mock)
+        let viewModel = PostListItemViewModel(post: post)
+        PostListItemView(viewModel: viewModel)
+            .previewLayout(.fixed(width: 375, height: 100))
     }
 }
 

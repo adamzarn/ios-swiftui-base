@@ -9,15 +9,17 @@ import SwiftUI
 
 struct LogoutButton: View {
     @EnvironmentObject var currentSession: CurrentSession
-    @ObservedObject var authService: AuthService
+    var authService: AuthService
     
     var body: some View {
-        Button("Logout", action: {
+        Button(action: {
             Task {
                 try? await authService.logout()
                 currentSession.token = nil
                 currentSession.user = nil
             }
+        }, label: {
+            Image(systemName: "rectangle.portrait.and.arrow.right")
         })
     }
 }

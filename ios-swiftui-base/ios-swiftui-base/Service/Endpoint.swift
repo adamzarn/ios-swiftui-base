@@ -12,6 +12,7 @@ enum Endpoint: URLRequestConvertible {
     case login(_ email: String, _ password: String)
     case logout
     case getFeed
+    case uploadProfilePhoto(data: Data)
     
     var baseUrl: String {
         return "https://vapor-base.herokuapp.com"
@@ -22,6 +23,7 @@ enum Endpoint: URLRequestConvertible {
         case .login: return "/auth/login"
         case .logout: return "/auth/logout"
         case .getFeed: return "/posts/feed"
+        case .uploadProfilePhoto: return "/users/profilePhoto"
         }
     }
     
@@ -30,6 +32,14 @@ enum Endpoint: URLRequestConvertible {
         case .login: return "POST"
         case .logout: return "DELETE"
         case .getFeed: return "GET"
+        case .uploadProfilePhoto: return "POST"
+        }
+    }
+    
+    var httpBody: Data? {
+        switch self {
+        case .uploadProfilePhoto(let data): return data
+        default: return nil
         }
     }
     
@@ -41,7 +51,7 @@ enum Endpoint: URLRequestConvertible {
         switch self {
         case .login(let email, let password):
             headers["Authorization"] = getBasicHeaderValue(email, password)
-        case .logout, .getFeed:
+        case .logout, .getFeed, .uploadProfilePhoto:
             headers["Authorization"] = "Bearer \(Keychain.token)"
         }
         return headers

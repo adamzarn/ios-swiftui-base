@@ -22,4 +22,26 @@ struct User: Codable {
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
+    
+    var initials: String {
+        let firstInitial = firstName.first
+        let lastInitial = lastName.first
+        return [firstInitial, lastInitial]
+            .compactMap { $0?.uppercased() }
+            .map { String($0) }
+            .joined()
+    }
+    
+    static var mock: User {
+        return User(id: "1",
+                    firstName: "Michael",
+                    lastName: "Jordan",
+                    username: "Air Jordan",
+                    email: "mj@gmail.com",
+                    profilePhotoUrl: nil,
+                    createdAt: "2021-11-04T00:17:01Z",
+                    updatedAt: "2021-11-04T00:17:01Z",
+                    isAdmin: true,
+                    isEmailVerified: true)
+    }
 }

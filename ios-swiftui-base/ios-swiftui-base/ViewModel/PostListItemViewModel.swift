@@ -19,12 +19,8 @@ struct PostListItemViewModel {
         return post.user.fullName
     }
     
-    var time: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        guard let date = formatter.date(from: post.createdAt) else { return "" }
-        formatter.dateFormat = "M/d/yy h:mm aa"
-        return formatter.string(from: date).lowercased()
+    var time: String? {
+        return post.createdAt.formattedDate()
     }
     
     var text: String {

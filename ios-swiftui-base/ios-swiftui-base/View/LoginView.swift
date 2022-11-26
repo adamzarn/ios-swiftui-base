@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginView: View, ErrorAlertPresenter {
     @EnvironmentObject var currentSession: CurrentSession
-    @State var viewModel = LoginViewModel()
-    @StateObject var authService = AuthService()
+    @StateObject var viewModel = LoginViewModel()
+    
+    var errorMessageState: State<String?> = State(initialValue: nil)
+    var errorIsPresentedState: State<Bool> = State(initialValue: false)
     
     var body: some View {
         VStack(spacing: 16) {
@@ -23,21 +25,32 @@ struct LoginView: View {
             SecureField("Password",
                         text: $viewModel.password,
                         prompt: Text("Password"))
-            Button("Login", action: {
-                Task {
-                    try? await authService.login(viewModel.email, viewModel.password)
-                    currentSession.token = authService.session?.token
-                    currentSession.user = authService.session?.user
-                }
-            })
-            if authService.isLoading {
+                .padding(.horizontal, 8.0)
+            Button("Login", action: login)
+            if viewModel.isLoading {
                 ProgressView()
             }
         }
         .padding()
-        .alert(authService.exception?.reason ?? "",
-               isPresented: $authService.didFail,
-               actions: {})
+        .alert(isPresented: errorIsPresentedState.projectedValue, content: alert)
+    }
+    
+    func login() {
+        Task {
+            do {
+                try await viewModel.login()
+                currentSession.token = viewModel.session?.token
+                currentSession.user = viewModel.session?.user
+            } catch {
+                if let error = error as? ServiceError {
+                    switch error {
+                    case .server(let exception): setErrorMessage(exception.reason)
+                    case .couldNotDecodeResponse(let message): setErrorMessage(message)
+                    default: setErrorMessage(nil)
+                    }
+                }
+            }
+        }
     }
 }
 

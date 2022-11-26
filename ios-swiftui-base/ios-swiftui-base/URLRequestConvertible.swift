@@ -11,6 +11,7 @@ protocol URLRequestConvertible {
     var baseUrl: String { get }
     var path: String? { get }
     var httpMethod: String { get }
+    var httpBody: Data? { get }
     var allHTTPHeaderFields: [String: String] { get }
     var url: URL? { get }
     var urlRequest: URLRequest? { get }
@@ -27,7 +28,21 @@ extension URLRequestConvertible {
         guard let url = url else { return nil }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = httpMethod
+        urlRequest.httpBody = httpBody
         urlRequest.allHTTPHeaderFields = allHTTPHeaderFields
         return urlRequest
+    }
+    
+    func submit() async throws {
+        return try await data().validate()
+    }
+    
+    func submit<T: Decodable>(responseType: T.Type) async throws -> T {
+        return try await data().validateAndDecode(responseType)
+    }
+    
+    func data() async throws -> Data {
+        guard let request = urlRequest else { throw ServiceError.invalidUrlRequest }
+        return try await URLSession.shared.data(for: request).0
     }
 }

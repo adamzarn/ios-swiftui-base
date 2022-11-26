@@ -13,10 +13,14 @@ struct ios_swiftui_baseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if currentSession.token == nil {
-                LoginView().environmentObject(currentSession)
+            if let token = currentSession.token {
+                MainTabView()
+                    .id(token)
+                    .environmentObject(currentSession)
             } else {
-                MainTabView().environmentObject(currentSession)
+                LoginView()
+                    .id(UUID())
+                    .environmentObject(currentSession)
             }
         }
     }
